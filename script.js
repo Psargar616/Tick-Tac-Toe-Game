@@ -47,12 +47,13 @@ function swapTurn() {
   gameInfo.innerText = `Current Player - ${currentPlayer}`;
 }
 
-
 // MAGIC LOGIC
 function checkGameOver() {
   let answer = "";
 
+  //   checking winning conditionuntil we find a match 
   winningPositions.forEach((position) => {
+    // all three boxes should be non empty and should have same value of X/O
     if (
       (gameGrid[position[0]] !== "" ||
         gameGrid[position[1]] !== "" ||
@@ -93,18 +94,16 @@ function checkGameOver() {
 
     let fillCount = 0;
     gameGrid.forEach((box) => {
-        if(box !== ""){
-            fillCount++;
-        }
+      if (box !== "") {
+        fillCount++;
+      }
     });
-    
-    if(fillCount == 9){
-        gameInfo.innerText = "Game Tied!!!";
-        // gameInfo.style.transform= "scale(1)";
-        gameInfo.classList.add("scaleClass");
-        newGameButton.classList.add("active");
-        
 
+    if (fillCount == 9) {
+      gameInfo.innerText = "Game Tied!!!";
+      // gameInfo.style.transform= "scale(1)";
+      gameInfo.classList.add("scaleClass");
+      newGameButton.classList.add("active");
     }
   });
 
