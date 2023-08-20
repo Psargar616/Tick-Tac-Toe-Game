@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: grid;
+  place-items: center;
+}
+
+
+.game-info{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.15);
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+
+}
+
+.tick-tac-toe{
+    width: 90%;
+    max-width: 25rem;
+    /* height: 25rem; */
+    /* to make square */
+    /* The aspect-ratio CSS property sets a preferred aspect ratio for the box, which will be used in the calculation of auto sizes and some other layout functions. */
+    aspect-ratio: 1/1;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: grid;
+    /* grid-template-rows: repeat(3,1fr); */
+    grid-template-columns: repeat(3,1fr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    
+}
+
+.box{
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box1, .box2, .box4, .box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3, .box6{
+    
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8{
+    
+    border-right: 2px solid white;
+}
+
+.btn{
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 1rem ;
+    color: white;
+    padding: 0.5rem 2rem;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: none;
+
+}
+
+.btn.active{
+    display: flex;
+}
+
+
+.win{
+    background-color: rgba(60, 231, 60, 0.43);
+}
