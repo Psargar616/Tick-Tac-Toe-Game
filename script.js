@@ -21,6 +21,7 @@ const winningPositions = [
 function initGame() {
   currentPlayer = "X";
   newGameButton.classList.remove("active");
+  gameInfo.classList.remove("scaleClass");
   // emptying grid
   gameGrid = ["", "", "", "", "", "", "", "", ""];
   // emptying grid on UI
@@ -77,8 +78,10 @@ function checkGameOver() {
       boxes[position[2]].classList.add("win");
     }
 
+    // if you have a winner
     if (answer !== "") {
       gameInfo.innerText = `Winner is Player - ${answer}`;
+      gameInfo.classList.add("scaleClass");
 
       // gameInfo.style.transform = scale(1);
 
@@ -98,8 +101,10 @@ function checkGameOver() {
     if(fillCount == 9){
         gameInfo.innerText = "Game Tied!!!";
         // gameInfo.style.transform= "scale(1)";
+        gameInfo.classList.add("scaleClass");
         newGameButton.classList.add("active");
         
+
     }
   });
 

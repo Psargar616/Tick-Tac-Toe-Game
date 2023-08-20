@@ -39,7 +39,7 @@
     border-radius: 1rem;
     border: 1px solid rgba(255,255,255,0.15);
     text-align: center;
-
+    transition: all 1s ease;
 }
 
 .tick-tac-toe{
@@ -115,4 +115,12 @@
 
 .win{
     background-color: rgba(60, 231, 60, 0.43);
+}
+
+.scaleClass{
+    transform-origin: center;
+    /* transform: scale(1.2); */
+    font-size: xx-large;
+    
+
 }
