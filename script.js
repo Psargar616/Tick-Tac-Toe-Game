@@ -85,6 +85,20 @@ function checkGameOver() {
       newGameButton.classList.add("active");
       return;
     }
+
+    // lets check for tie
+
+    let fillCount = 0;
+    gameGrid.forEach((box) => {
+        if(box !== ""){
+            fillCount++;
+        }
+    });
+    
+    if(fillCount == 9){
+        gameInfo.innerText = "Game Tied!!!";
+        // gameInfo.style.transform= "scale(1)";
+    }
   });
 
   // newGameButton.classList.add("active");
