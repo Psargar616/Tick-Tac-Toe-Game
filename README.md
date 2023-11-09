@@ -5,7 +5,9 @@ Learned so much about DOM manipulation and had an absolute blast! 💻🕹️ Ex
 
 ## Project Screenshot
 
+![ss](<recordings and ss/screencapture1.png>)
 
+<video src="recordings%20and%20ss/Recording%20.mp4" controls title="Title"></video>
 ## project links
 Check out the live demo of the project here: [click here](https://psargar616.github.io/Tick-Tac-Toe-Game/) 
 
